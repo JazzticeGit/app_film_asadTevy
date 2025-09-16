@@ -1,0 +1,261 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+/* Body dan background */
+body {
+    background: #fff8f0;
+    padding: 20px;
+}
+
+/* Navbar dengan gradient kuning ke oranye */
+/* Navbar dengan gradient kuning ke oranye */
+nav {
+    background: linear-gradient(90deg, #f6d365 0%, #fda085 100%);
+    padding: 20px 32px; /* 🔥 kecilkan padding biar nav lebih ramping */
+    box-shadow: 0 2px 8px rgba(253, 160, 133, 0.5);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.nav-bg {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;   /* 🔥 pastikan item rata tengah vertikal */
+    justify-content: space-between;
+}
+
+/* Logo di navbar */
+.nav-bg h2 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.4rem;   /* 🔥 perkecil ukuran teks logo */
+    margin: 0;           /* hilangkan margin default */
+    line-height: 1;      /* rapatkan tinggi line */
+}
+
+/* Link nav */
+.navlink ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* lebih kecil biar rapi */
+    margin: 0; /* hilangkan margin default ul */
+    padding: 0;
+}
+
+.navlink ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;  /* 🔥 kecilkan font nav */
+    transition: color 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
+    padding: 6px 10px;   /* tambah sedikit padding untuk klik area */
+}
+
+
+.navlink ul li a:hover {
+    color: #fff3b0;
+}
+
+/* Beri jarak dari navbar */
+form, h2, .card-container {
+    max-width: 1200px;
+    margin: 100px auto 40px auto;
+    padding: 0 20px;
+}
+
+/* Form dengan background putih dan shadow lembut */
+form {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(253, 160, 133, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+form:hover {
+    box-shadow: 0 12px 35px rgba(253, 160, 133, 0.35);
+}
+
+form h2 {
+    margin-bottom: 25px;
+    color: #fda085;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(253, 160, 133, 0.5);
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #b35e00;
+}
+
+input[type="text"],
+input[type="file"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1.8px solid #fcdcb1;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    resize: vertical;
+    background: #fff7e6;
+    color: #5a3e00;
+}
+
+input[type="text"]:focus,
+input[type="file"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #fda085;
+    outline: none;
+    background: #fff9f2;
+}
+
+textarea {
+    min-height: 100px;
+}
+
+button[type="submit"] {
+    background: linear-gradient(90deg, #f6d365 0%, #fda085 100%);
+    color: #5a3e00;
+    border: none;
+    padding: 14px 30px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100%;
+    transition: background 0.4s ease, color 0.3s ease;
+    box-shadow: 0 4px 15px rgba(253, 160, 133, 0.4);
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(90deg, #fda085 0%, #f6d365 100%);
+    color: #7a4a00;
+    box-shadow: 0 6px 20px rgba(253, 160, 133, 0.6);
+}
+
+/* Daftar Film */
+h2 {
+    color: #fda085;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(253, 160, 133, 0.5);
+}
+
+/* Container kartu film */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding-bottom: 40px;
+}
+
+/* Kartu film */
+.card {
+    background: #fff7e6;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(253, 160, 133, 0.25);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(253, 160, 133, 0.4);
+}
+
+/* Gambar poster */
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1.5px solid #fcdcb1;
+}
+
+/* Konten kartu */
+.card-content {
+    padding: 20px 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    color: #fda085;
+    text-shadow: 1px 1px 2px rgba(253, 160, 133, 0.6);
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    line-height: 1.4;
+    color: #7a4a00;
+    flex-grow: 1;
+}
+
+/* Status film */
+.status {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    align-self: flex-start;
+    margin-top: 15px;
+    user-select: none;
+    box-shadow: 0 2px 8px rgba(253, 160, 133, 0.3);
+}
+
+/* Warna status */
+.status.upcoming {
+    background: linear-gradient(90deg, #f6d365 0%, #fda085 100%);
+    color: #7a4a00;
+}
+
+.status.now_playing {
+    background: linear-gradient(90deg, #fda085 0%, #f6d365 100%);
+    color: #5a3e00;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+    form, h2, .card-container {
+        margin: 80px 15px 30px 15px;
+        padding: 0;
+    }
+
+    .nav-bg {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navlink ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
